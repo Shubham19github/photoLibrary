@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Photo Library</title>
+		<link href="./stylesheets/styles.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div id="top">
+			<h1 style="float:left; padding-left: 550px;">Photo Library</h1>
+			<button id="AddButton">+</button>
+			<button id="delButton">-</button>
+		</div>
+
+		<div id="search_div">
+			<center><input type="text" id="searchImg" name="search" placeholder="Search Text" onkeyup="searchFunc()"></center>
+		</div>
+
+		<div id="addModal" class="modal">
+
+		  <div class="modal-content">
+			<span class="close"><font style="float:left; padding:15px 0px 15px 20px">Add Photo</font><font style="float: right; padding:15px 10px 15px 0px; font-weight:bold;">&times;</font></span>
+			<input type="file" id="files" name="files[]" multiple />
+			<center><input type="text" id ="keyword" name="keyword" placeholder="Enter unique Keyword" style="padding-left:0px; width:90%;"></center>
+			<p id="warning"></p>
+			<button type="submit" id="uploadBtn">UPLOAD</button>
+		  </div>
+
+		</div>
+
+		<div id="subModal" class="modal">
+
+		  <div class="modal-content">
+			<span class="anotherclose"><font style="float:left; padding:15px 0px 15px 20px">Delete Photo</font><font style="float: right; padding:15px 10px 15px 0px; font-weight:bold;">&times;</font></span>
+			<center><input type="text" id ="delkeyword" placeholder="Type Keyword of picture" style="padding-left:0px; width:90%;"></center>
+			<button type="submit" id="deleteBtn">DELETE</button>
+		  </div>
+
+		</div>
+
+		<output id="list"></output>
+
+		<div id="afterSearch">
+
+		</div>
+		<script src="./control.js"></script>
+	
+	</body>
+</html>
